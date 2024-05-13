@@ -1,14 +1,12 @@
 # Cross platform toolchain setup for Apple Silicon host
 
 ## Install toolchains 
-- MacOS
-simply Clang
+- for MacOS simply `Clang`
 
-- Linux
-available via homebrew here:
+- for Linux available via homebrew, here:
 https://github.com/messense/homebrew-macos-cross-toolchains
 
-- Windows
+- for Windows
 `brew install mingw-w64`
 
 ## Setup PATH
@@ -37,37 +35,38 @@ alias windows_x64_cxx="x86_64-w64-mingw32-g++"
 alias windows_x64_c="x86_64-w64-mingw32-gcc"
 ```
 
+# Example compilation commands
 ## OSX
 ### x86_64
-`apple_x64_cxx -o osx/x86_64 main.cpp`
+- executable: `apple_x64_cxx -o osx/x86_64 main.cpp`
 
-`apple_x64_c -o osx/x86_64.so -shared lib.c`
+- shared: `apple_x64_c -o osx/x86_64.so -shared lib.c`
 
-`apple_x64_c -o osx/x86_64.dylib -dynamiclib lib.c`
+- dynamiclib: `apple_x64_c -o osx/x86_64.dylib -dynamiclib lib.c`
 ### arm64
-`apple_arm64_cxx -o osx/arm64 main.cpp`
+- executable: `apple_arm64_cxx -o osx/arm64 main.cpp`
 
-`apple_arm64_c -o osx/arm64.so -shared lib.c`
+- shared: `apple_arm64_c -o osx/arm64.so -shared lib.c`
 
-`apple_arm64_c -o osx/arm64.dylib -dynamiclib lib.c`
+- dynamiclib: `apple_arm64_c -o osx/arm64.dylib -dynamiclib lib.c`
 
 ## Linux
 ### x86_64
-`linux_x64_cxx -o linux/x86_64 main.cpp`
+- executable: `linux_x64_cxx -o linux/x86_64 main.cpp`
 
-`linux_x64_c -o linux/x86_64.so -shared lib.c`
+- shared: `linux_x64_c -o linux/x86_64.so -shared lib.c`
 ### x86
-`linux_x86_cxx -o linux/x86 main.cpp`
+- executable: `linux_x86_cxx -o linux/x86 main.cpp`
 
-`linux_x86_c -o linux/x86.so -shared lib.c`
+- shared: `linux_x86_c -o linux/x86.so -shared lib.c`
 
 ## Windows
 ### x86_64
-`windows_x64_cxx -o windows/x86_64.exe main.cpp`
+- executable: `windows_x64_cxx -o windows/x86_64.exe main.cpp`
 
-`windows_x64_c -o windows/x86_64.dll -shared lib.c`
+- shared: `windows_x64_c -o windows/x86_64.dll -shared lib.c`
 ### x86
-`windows_x86_cxx -o windows/x86.exe main.cpp`
+- executable: `windows_x86_cxx -o windows/x86.exe main.cpp`
 
-`windows_x86_c -o windows/x86.dll -shared lib.c`
+- shared: `windows_x86_c -o windows/x86.dll -shared lib.c`
 
