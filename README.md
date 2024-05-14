@@ -9,14 +9,6 @@ https://github.com/messense/homebrew-macos-cross-toolchains
 - for Windows
 `brew install mingw-w64`
 
-## Setup PATH
-```zsh
-export PATH="/opt/homebrew/Cellar/i686-unknown-linux-gnu/13.2.0/toolchain/bin:$PATH"
-export PATH="/opt/homebrew/Cellar/x86_64-unknown-linux-gnu/13.2.0/toolchain/bin:$PATH"
-export PATH="/opt/homebrew/Cellar/mingw-w64/11.0.1_1/toolchain-i686/bin:$PATH"
-export PATH="/opt/homebrew/Cellar/mingw-w64/11.0.1_1/toolchain-x86_64/bin:$PATH"
-```
-
 ## The bash/zsh profile
 ```zsh
 alias linux_x64_cxx="x86_64-unknown-linux-gnu-g++"
